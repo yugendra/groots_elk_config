@@ -1,0 +1,77 @@
+[
+  {
+    "_id": "AWFNiLn4LtEVfypgn7jk",
+    "_type": "search",
+    "_source": {
+      "title": "Local To Remote",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "SENDER",
+        "RECIPIENT",
+        "SUBJECT",
+        "SIZE",
+        "ATTACHMENT",
+        "DELIVERY_STATUS"
+      ],
+      "sort": [
+        "SENDER.keyword",
+        "asc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"AWFNfi38LtEVfypgn6nL\",\"highlightAll\":true,\"version\":true,\"query\":{\"query_string\":{\"query\":\"MTA:postfix-outgoing AND SENDER:athagroup.in AND NOT RECIPIENT:athagroup.in\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "AWFNkEFVLtEVfypgn7jm",
+    "_type": "search",
+    "_source": {
+      "title": "Remote To Local",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "RECIPIENT",
+        "SENDER",
+        "SUBJECT",
+        "SIZE",
+        "ATTACHMENT",
+        "RELAYED_FROM"
+      ],
+      "sort": [
+        "RECIPIENT.keyword",
+        "asc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"AWFNfi38LtEVfypgn6nL\",\"highlightAll\":true,\"version\":true,\"query\":{\"query_string\":{\"query\":\"MTA:QMAIL AND NOT SENDER:athagroup.in AND RECIPIENT:athagroup.in\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "AWFNja3PLtEVfypgn7jl",
+    "_type": "search",
+    "_source": {
+      "title": "Local To Local",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "SENDER",
+        "RECIPIENT",
+        "SUBJECT",
+        "SIZE",
+        "ATTACHMENT",
+        "RELAYED_FROM"
+      ],
+      "sort": [
+        "SENDER.keyword",
+        "asc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"AWFNfi38LtEVfypgn6nL\",\"highlightAll\":true,\"version\":true,\"query\":{\"query_string\":{\"query\":\"MTA:QMAIL AND SENDER:athagroup.in AND RECIPIENT:athagroup.in\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  }
+]
