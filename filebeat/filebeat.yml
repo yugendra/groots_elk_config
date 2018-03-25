@@ -16,12 +16,15 @@ filebeat.prospectors:
 # Below are the prospector specific configurations.
 
 - input_type: log
-
-  # Paths that should be crawled and fetched. Glob based paths.
   paths:
-    - /root/elk/maillog
-    - /root/elk/mailstats
-    #- c:\programdata\elasticsearch\logs\*
+    - /var/log/mithi/maillog
+    - /var/log/mithi/mailstats
+  tags: ['mithi']
+- input_type: log
+  paths:
+    - /var/log/atha/maillog
+    - /var/log/atha/mailstats
+  tags: ['atha']
 
   # Exclude lines. A list of regular expressions to match. It drops the lines that are
   # matching any regular expression from the list.
