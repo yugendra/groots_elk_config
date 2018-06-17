@@ -1,4 +1,4 @@
 email [a-zA-Z0-9_.+=:-]+@[0-9A-Za-z][0-9A-Za-z-]{0,62}(?:\.(?:[0-9A-Za-z][0-‌​9A-Za-z-]{0,62}))*
 timestamppostfix %{MONTH}%{SPACE}%{MONTHDAY}%{SPACE}%{HOUR}:%{MINUTE}:%{SECOND}
 timestampmailstat %{DAY},%{SPACE}%{MONTHDAY}%{SPACE}%{MONTH}%{SPACE}%{YEAR}%{SPACE}%{TIME}
-
+timestampmaillog %{MONTH}%{SPACE}%{MONTHDAY}%{SPACE}%{TIME}

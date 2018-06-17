@@ -17,15 +17,7 @@ filebeat.prospectors:
 
 - input_type: log
   paths:
-    - /var/log/mithi/maillog
-    - /var/log/mithi/mailstats
-  tags: ['mithi']
-- input_type: log
-  paths:
-    - /var/log/atha/maillog
-    - /var/log/atha/mailstats
-  tags: ['atha']
-
+    - /var/log/maillog
   # Exclude lines. A list of regular expressions to match. It drops the lines that are
   # matching any regular expression from the list.
   #exclude_lines: ["^DBG"]
